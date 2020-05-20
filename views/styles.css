@@ -1,0 +1,26 @@
+#toggleLogin {
+
+	padding-right: 15px;
+}
+
+/* below is footer stuff? */
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	/*margion bottom by footer height */
+	margin-bottom: 60px;
+}
+
+
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/*set fioxed hight of footer */
+	height: 60px;
+	line-height: 60px; /*vertically center the text there*/
+  background-color: #f5f5f5;
+}
