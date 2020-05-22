@@ -34,8 +34,7 @@
 </form>
       </div>
       <div class="modal-footer">
-          <a id="toggleLogin"> Sign up </a> <!-- not working -->
-        <button type="button" class="btn btn-info" id="toggleLogin">Sign Up</button>
+        <a id="toggleLogin"> Sign up </a> <!-- not working -->
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" id="loginSignupButton" class="btn btn-primary">Login</button>
       </div>
@@ -46,7 +45,7 @@
 <!-- this will go into js later -->
 <script type="text/javascript">
 	
-	$("toggleLogin").click(function() {
+	$("#toggleLogin").click(function() {
 
 		if ($("#loginActive").val() == "1") {
 
