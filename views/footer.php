@@ -1,4 +1,4 @@
- <footer class="footer">
+<footer class="footer">
 
  	<div class="container">
  	<p>&copy; BubblegumCombo 2020</p>
@@ -31,10 +31,12 @@
     <label for="formGroupExampleInput2">Password</label>
     <input type="password" class="form-control" id="password" placeholder="Password">
   </div>
-</form>
+		</form>
       </div>
-      <div class="modal-footer">
-      		<a id="toggleLogin"> Sign up </a> <!-- not working -->
+            <div class="modal-footer">
+
+      		<a id="toggleLogin"> Sign up </a> <!-- not working --> 
+      		
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" id="loginSignupButton" class="btn btn-primary">Login</button>
       </div>
