@@ -1,6 +1,6 @@
 <?php
 
-	include ("fuinctions.php");
+	include ("functions.php");
 
 	if ($_GET['action'] == "loginSignup") {
 
