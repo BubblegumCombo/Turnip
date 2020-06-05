@@ -34,15 +34,14 @@
   </div>
 		</form>
       </div>
-<<<<<<< HEAD
+
             <div class="modal-footer">
 
-      		<a id="toggleLogin"> Sign up </a> <!-- not working --> 
+      		<a button type="button" id="toggleLogin"> Sign up </a> <!-- not working --> 
       		
-=======
-      <div class="modal-footer">
-        <a id="toggleLogin"> Sign up </a> <!-- not working -->
->>>>>>> 2eff649910f4c733a63dc154cef41930748397e7
+
+
+
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" id="loginSignupButton" class="btn btn-primary">Login</button>
       </div>

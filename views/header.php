@@ -43,10 +43,10 @@
 
         <a class="btn btn-outline-success" href="?function=logout">Logout</a>
      
-      <?php } else {} ?>
+      <?php } else { ?>
 
       <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="modal" data-target="#exampleModal">Login/Signup</button>
-    <?php  ?>
+    <?php } ?>
     </div>
   </div>
 </nav>

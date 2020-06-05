@@ -29,3 +29,21 @@ body {
 
 	display: none;
 }
+
+.mainContainer {
+
+	padding: 20px;
+}
+
+.time {
+
+	color: grey;
+}
+
+.prices {
+
+	border: 1px solid grey;
+	border-radius: 5px;
+	padding:5px;
+	margin: 5px;
+}
