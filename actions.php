@@ -19,7 +19,7 @@
   			$error = ("Enter a valid email address");
 		}
 
-		if ($_POST['loginActive'] == "0") {
+		if ($_POST['loginActive'] == "0") { // Signup Logic
 
 			$query  = "SELECT * FROM users WHERE email = '". mysqli_real_escape_string($link, $_POST['email'])."' LIMIT 1";
 			$result = mysqli_query($link, $query);
@@ -41,7 +41,7 @@
 				}
 
 			}
-		} else {
+		} else { // Login Logic
 
 			$query  = "SELECT * FROM users WHERE email = '". mysqli_real_escape_string($link, $_POST['email'])."' LIMIT 1";
 
@@ -51,6 +51,11 @@
 			if($row){
 				if ($row['password'] = md5(md5($row ['id'].$_POST['password']))) {
 					$_SESSION['id'] = $row['id'];
+					?>
+					<script type="text/javascript">
+					window.location = "http://localhost/turnip/";
+					</script>
+    			<?php
 				} else {
 					$error = "Could not find that username/password combo. Try again";
 				}
@@ -64,7 +69,7 @@
 
 	if ($error != "") {
 
-		echo $error;
+		echo "Cool good job dude";
 		exit();
 
 	}
