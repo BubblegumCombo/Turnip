@@ -39,7 +39,8 @@
     </ul>
     <div class="form-inline my-2 my-lg-0">
 
-      <?php if ($_SESSION ['id']) { ?>
+      <?php 
+      if (isset($_SESSION ['id'])) { ?>
 
         <a class="btn btn-outline-success" href="?function=logout">Logout</a>
      

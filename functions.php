@@ -9,11 +9,8 @@
 		print_r(mysqli_connect_error());
 		exit();
 	}
-
-
-
  */
-
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $link = mysqli_connect("localhost", "root", "", "turnip");
 
 	if (mysqli_connect_errno()) {
@@ -22,9 +19,10 @@ $link = mysqli_connect("localhost", "root", "", "turnip");
 		exit();
 	}
 
-	if ($_GET['function'] == "logout") {
-
-		session_unset();
+	if (isset($_GET['function'])) {
+		if($_GET['function'] == "logout"){
+			session_unset();
+		}
 	}
 
 			function time_since($since) {
@@ -88,14 +86,17 @@ $link = mysqli_connect("localhost", "root", "", "turnip");
 
 function displayPriceBox() {
 
-	if ($_SESSION['id'] > 0) {
+	if (isset($_SESSION['id'])) {
+		if($_SESSION['id'] > 0){
+			echo '<form class="form-inline">
+				<div class="form-group">
+				<textarea class="form-control" id="turnipContent"></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary">Post Price</button>
+				</form>';
+		}
 
-		echo '<form class="form-inline">
-	<div class="form-group">
-	<textarea class="form-control" id="turnipContent"></textarea>
-	</div>
-	<button type="submit" class="btn btn-primary">Post Price</button>
-	</form>';
+		
 	}
 }
 
