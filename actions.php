@@ -69,4 +69,29 @@
 
 	}
 
+	if ($_GET['action'] == 'toggleFollow') {
+
+		$query  = "SELECT * FROM isFollowing WHERE follower = ". mysqli_real_escape_string($link, $_SESSION['id'])."AND isFolloiwing = ". mysqli_real_escape_string($link, $POST['userId'])."LIMIT 1";
+
+			$result = mysqli_query($link, $query);
+
+			if(mysqli_num_rows($result) > 0){
+
+			$row = mysqli_fetch_assoc($result);
+
+			mysqli_query($;ink, "DELETE FROM isFollowing WHERE id = ". mysqli_real_escape_string($link, $row['id'])."LIMIT 1");
+
+			echo "1";
+
+		} else {
+
+			mysqli_query($;ink, "INSERT INTO isFollowing (follower, isFollowing) VALUES (". mysqli_real_escape_string($link, $SESSION['id']).", ". mysqli_real_escape_string($link, $_POST['userId']).")");
+
+			echo "2";
+
+
+		}
+
+	}
+
 ?>

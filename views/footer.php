@@ -37,7 +37,7 @@
 
             <div class="modal-footer">
 
-      		<a button type="button" id="toggleLogin"> Sign up </a> <!-- not working --> 
+      		<a button type="button" id="toggleLogin"> Sign up </a> 
       		
 
 
@@ -88,6 +88,34 @@
 
 		})
 	})
+
+  $(".toggleFOllow").click(function() {
+
+    var id = $(this).attr("data-userId");
+
+    alert($(this).attr("data-userId"));
+
+    $.ajax({
+      type: "POST",
+      url: "actions.php?action=toggleFollow",
+      data: "userId=" + $(this).attr("data-userId"),
+          success: function (result) {
+
+            if (result == "1") {
+
+              $("a[data-userId='" + id "']").html("Follow");
+
+            } els {
+
+              if (result == "2") {
+
+              $("a[data-userId='" + id "']").html("Unfollow");
+            }
+            
+          }
+
+    })
+  })
 
 </script>
 
