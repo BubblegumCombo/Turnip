@@ -25,7 +25,7 @@
 			$result = mysqli_query($link, $query);
 			if(mysqli_num_rows($result) > 0){
 				$error = "That email already exists.";
-			}else {
+			} else {
 
 				$query = "INSERT INTO users (`email`, `password`) VALUES ('". mysqli_real_escape_string($link, $_POST['email'])."', '". mysqli_real_escape_string($link, $_POST['password'])."')";
 				if (mysqli_query($link, $query)) {
@@ -60,7 +60,7 @@
 				} else {
 					$error = "Could not find that username/password combo. Try again";
 				}
-			} else{
+			} else {
 				$error = "Could not find that username/password combo. Try again";
 			}
 			
