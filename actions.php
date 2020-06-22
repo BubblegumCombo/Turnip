@@ -37,10 +37,11 @@
 
 				} else {
 
-					$error ="Couldn't create the user. Try again";
+					$error ="Couldn't create the user. Try again?";
 				}
 
 			}
+            
 		} else { // Login Logic
 
 			$query  = "SELECT * FROM users WHERE email = '". mysqli_real_escape_string($link, $_POST['email'])."' LIMIT 1";
@@ -84,13 +85,13 @@
 
 			$row = mysqli_fetch_assoc($result);
 
-			mysqli_query($;ink, "DELETE FROM isFollowing WHERE id = ". mysqli_real_escape_string($link, $row['id'])."LIMIT 1");
+			mysqli_query($link, "DELETE FROM isFollowing WHERE id = ". mysqli_real_escape_string($link, $row['id'])."LIMIT 1");
 
 			echo "1";
 
 		} else {
 
-			mysqli_query($;ink, "INSERT INTO isFollowing (follower, isFollowing) VALUES (". mysqli_real_escape_string($link, $SESSION['id']).", ". mysqli_real_escape_string($link, $_POST['userId']).")");
+			mysqli_query($link, "INSERT INTO isFollowing (follower, isFollowing) VALUES (". mysqli_real_escape_string($link, $SESSION['id']).", ". mysqli_real_escape_string($link, $_POST['userId']).")");
 
 			echo "2";
 
