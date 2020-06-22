@@ -89,7 +89,7 @@
 		})
 	})
 
-  $(".toggleFOllow").click(function() {
+  $(".toggleFollow").click(function() {
 
     var id = $(this).attr("data-userId");
 
@@ -105,7 +105,7 @@
 
               $("a[data-userId='" + id "']").html("Follow");
 
-            } els {
+            } else {
 
               if (result == "2") {
 
@@ -115,6 +115,7 @@
           }
 
     })
+  }
   })
 
 </script>

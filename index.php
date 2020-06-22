@@ -4,7 +4,8 @@
 
 	include("views/header.php");
 
-	if ($_GET['page'] =='timeline') {
+	if (isset($_GET['page'])) {
+		if ($_GET['page'] =='timeline') {
 
 		include ("views/timeline.php");
 
@@ -13,7 +14,7 @@
 
 		
 	include("views/home.php");
-}
+}}
 
 
 	include("views/footer.php");

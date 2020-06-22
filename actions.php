@@ -44,6 +44,7 @@
             
 		} else { // Login Logic
 
+			
 			$query  = "SELECT * FROM users WHERE email = '". mysqli_real_escape_string($link, $_POST['email'])."' LIMIT 1";
 
 			$result = mysqli_query($link, $query);
