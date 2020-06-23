@@ -89,12 +89,12 @@ function displayPriceBox() {
 
 	if (isset($_SESSION['id'])) {
 		if($_SESSION['id'] > 0){
-			echo '<form class="form-inline">
+			echo '<div class="form-inline">
 				<div class="form-group">
 				<textarea class="form-control" id="turnipContent"></textarea>
 				</div>
-				<button type="submit" class="btn btn-primary">Post Price</button>
-				</form>';
+				<button id="postPriceButton" class="btn btn-primary">Post Price</button>
+				</div>';
 		}
 
 		

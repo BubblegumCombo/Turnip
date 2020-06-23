@@ -117,6 +117,11 @@
     })
   }
   })
+      
+$("postPriceButton").click(function() {
+    
+    alert($("turnipContent").val());
+}
 
 </script>
 
