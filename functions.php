@@ -78,8 +78,7 @@ $link = mysqli_connect("localhost", "root", "", "turnip");
 
 			echo "<p>".$row['price']. " bells</p>";
 
-			echo "<p><a class='toggleFollow' data-userId='".$row['userid']."'>Follow</a></p></div>"; /* wont make it a link*/
-
+			echo "<p>Follow</p></div>";
 		}
 	}
 
