@@ -24,7 +24,7 @@
         <a class="nav-link" href="?page=timeline">Timeline</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="?page=yourtweets">Your tweets</a>
+        <a class="nav-link" href="?page=yourtweets">Your Prices</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="?page=publicprofiles">Public Profiles</a>

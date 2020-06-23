@@ -88,6 +88,29 @@
 
 		})
 	})
+    
+    // this shit right here fucks up. you'll randomly see the success and fails
+    $("#postPriceButton").click(function() {
+    
+    $.ajax({
+			type: "POST",
+			url: "actions.php?action=postPrice",
+			data: "turnipContent=" + $("#turnipContent").val(),
+					success: function (result) {
+						if (result == "1") {
+                            
+                            $("#tweetSucess").show();
+                            $("#tweetFail").hide();
+                            
+                        } else if (result !=""){
+                            
+                            $("#priceFail").html(result).show();
+                            $("#priceSuccess").hide();
+                        }
+					}
+
+		})
+})
 
 </script>
 

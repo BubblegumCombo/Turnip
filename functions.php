@@ -33,7 +33,7 @@ $link = mysqli_connect("localhost", "root", "", "turnip");
 		        array(60 * 60 * 24 , 'day'),
 		        array(60 * 60 , 'hour'),
 		        array(60 , 'min'),
-		        array(1 , 's')
+		        array(1 , 'sec')
 		    );
 
 		    for ($i = 0, $j = count($chunks); $i < $j; $i++) {
@@ -56,7 +56,10 @@ $link = mysqli_connect("localhost", "root", "", "turnip");
 		if ($type == 'public') {
 
 			$whereClause = "";
-	}
+	} else if ($type == 'yourprices') {
+            
+            $whereClause = "WHERE userid = ". mysqli_real_escape_string($_SESSION['id']);
+        }
 
 	$query = "SELECT * FROM turnips ".$whereClause." ORDER BY `datetime` DESC LIMIT  10";
 
@@ -88,7 +91,7 @@ function displayPriceBox() {
 
 	if (isset($_SESSION['id'])) {
 		if($_SESSION['id'] > 0){
-			echo '<div class="form-inline">
+			echo ' <div id="priceSuccess" class="alert alert-success"> Your price has been posted. </div> <div id="priceFail" class="alert alert-danger"></div> <div class="form-inline">
 				<div class="form-group">
 				<textarea class="form-control" id="turnipContent"></textarea>
 				</div>
