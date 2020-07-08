@@ -1,4 +1,4 @@
-sup B    <div class="container mainContainer">
+    <div class="container mainContainer">
 
       <div class="row">
     <div class="col-sm-8">
