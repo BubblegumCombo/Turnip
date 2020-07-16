@@ -10,7 +10,7 @@
     </div>
     <div class="col-sm-4">
     	
-    	<h4>home</h4>
+    	<h4></h4>
 
     	<?php displayPriceBox(); ?>
 

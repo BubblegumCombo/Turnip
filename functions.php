@@ -25,6 +25,8 @@ $link = mysqli_connect("localhost", "root", "", "turnip");
 		}
 	}
 
+	date_default_timezone_set('America/Los_Angeles');
+
 			function time_since($since) {
 		    $chunks = array(
 		        array(60 * 60 * 24 * 365 , 'year'),
@@ -48,7 +50,44 @@ $link = mysqli_connect("localhost", "root", "", "turnip");
 		    return $print;
 		}
 
+	function selectPage() {
+
+		if (isset ($_GET['page'])) { #true if page is set
+
+			
+			if ($_GET['page']=='yourprices') { #true if logged in
+
+				 if (isset ($_SESSION['id'])) { # true if clicked on Your prices
+
+					include("views/yourprices.php");
+
+				} else {
+
+				echo '<script>alert("Please log in.")</script>';
+
+				include("views/home.php");
+
+					}	
+			} elseif  ($_GET['page']=='memes') {
+
+				include("views/meme.php");
+			}
+
+
+			
+
 		
+
+		} else { #if page is not set
+
+			include("views/home.php");
+		}
+
+
+
+		}
+
+
 	function displayPrice($type) {
 
 		global $link;
@@ -58,7 +97,7 @@ $link = mysqli_connect("localhost", "root", "", "turnip");
 			$whereClause = "";
 	} else if ($type == 'yourprices') {
             
-            $whereClause = "WHERE userid = ". mysqli_real_escape_string($_SESSION['id']);
+            $whereClause = "WHERE userid = ".  mysqli_real_escape_string($link, $_SESSION['id']); 
         }
 
 	$query = "SELECT * FROM turnips ".$whereClause." ORDER BY `datetime` DESC LIMIT  10";
@@ -95,7 +134,7 @@ function displayPriceBox() {
 				<div class="form-group">
 				<textarea class="form-control" id="turnipContent"></textarea>
 				</div>
-				<button id="postPriceButton" class="btn btn-primary">Post Price</button>
+				<button id="postPriceButton" class="btn btn-primary">Post Current Turnip Price</button>
 				</div>';
 		}
 

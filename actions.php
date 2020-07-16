@@ -55,7 +55,7 @@
 					$_SESSION['id'] = $row['id'];
 					?>
 					<script type="text/javascript">
-					window.location = "http://localhost/turnip/";
+					window.location = "http://localhost/stuff/turnip/index.php";
 					</script>
     			<?php
 				} else {

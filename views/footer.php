@@ -78,7 +78,7 @@
 					success: function (result) {
 						if (result == "1") {
 
-							window.location.assign("http://localhost/stuff/turnip/");
+							window.location.assign("http://localhost/stuff/turnip/index.php");
 						} else {
 
 							$("#loginAlert").html(result).show();

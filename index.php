@@ -4,19 +4,8 @@
 
 	include("views/header.php");
 
-    if (isset($_GET['page']) == 'timeline') {
-        
-        include ("views/timeline.php");
-        
-    } else if (isset($_GET['page']) == 'yourprices') {
-        
-        include("views/yourprices.php");
-    } else {
-        
-	
-	include("views/home.php");
-        
-    }
+   
+    selectPage();       
 
 	include("views/footer.php");
 
