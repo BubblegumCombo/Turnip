@@ -21,7 +21,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="?page=timeline">Timeline</a>
+        <a class="nav-link" href="?page=timeline">Turnip Prices</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="?page=yourtweets">Your Prices</a>
@@ -31,9 +31,6 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="?page=memes">Memes</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" href="?page=turnipprices">Turnip Prices</a>
       </li>
       
     </ul>

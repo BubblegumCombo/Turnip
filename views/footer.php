@@ -37,7 +37,7 @@
 
             <div class="modal-footer">
 
-      		<a button type="button" id="toggleLogin"> Sign up </a> <!-- not working --> 
+      		<a button type="button" id="toggleLogin"> Sign up </a> 
       		
 
 
@@ -89,7 +89,7 @@
 		})
 	})
     
-    // this shit right here fucks up. you'll randomly see the success and fails
+    // this shit right here fucks up. you'll see a red 1 then you have to go back to reload
     $("#postPriceButton").click(function() {
     
     $.ajax({

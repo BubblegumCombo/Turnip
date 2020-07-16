@@ -10,7 +10,7 @@
     </div>
     <div class="col-sm-4">
     	
-    	<h4>Column 2</h4>
+    	<h4>Your Turnip Prices</h4>
 
     	<?php displayPriceBox(); ?>
 

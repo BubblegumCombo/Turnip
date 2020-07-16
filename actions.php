@@ -84,12 +84,12 @@ if ($_GET['action'] == 'postPrice') {
          
                 } else if (strlen($_POST['turnipContent']) > 3) {
          
-         echo "Your probably typed in the wrong number. Try again!";
+         echo "You probably typed in the wrong number. Try again!";
      } else {
          
          mysqli_query($link, "INSERT INTO turnips (`price`, `userid`, `datetime`) VALUES ('".mysqli_real_escape_string($link, $_POST['turnipContent'])."', ".mysqli_real_escape_string($link, $_SESSION['id']).", NOW())");
          
-         echo"1";
+         echo"Price Succesfully Posted";
      }
 }
 

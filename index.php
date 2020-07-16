@@ -4,11 +4,11 @@
 
 	include("views/header.php");
 
-    if ($_GET['page'] == 'timeline') {
+    if (isset($_GET['page']) == 'timeline') {
         
         include ("views/timeline.php");
         
-    } else if ($_GET['page'] == 'yourprices') {
+    } else if (isset($_GET['page']) == 'yourprices') {
         
         include("views/yourprices.php");
     } else {
