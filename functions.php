@@ -2,15 +2,15 @@
 
 	session_start();
 
-	/* $link = msqli_connect("shareddb-u.hosting.stackcp.net", "turnip-313333c155", "1lh5op5uiq", "turnip-313333c155");
+	 $link = msqli_connect("shareddb-u.hosting.stackcp.net", "turnip-313333c155", "1lh5op5uiq", "turnip-313333c155");
 
 	if (mysqli_connect_errno()) {
 
 		print_r(mysqli_connect_error());
 		exit();
 	}
- */
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+ 
+/*mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $link = mysqli_connect("localhost", "root", "", "turnip");
 
 	if (mysqli_connect_errno()) {
@@ -18,7 +18,7 @@ $link = mysqli_connect("localhost", "root", "", "turnip");
 		print_r(mysqli_connect_error());
 		exit();
 	}
-
+*/
 	if (isset($_GET['function'])) {
 		if($_GET['function'] == "logout"){
 			session_unset();
