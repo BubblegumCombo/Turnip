@@ -78,7 +78,7 @@
 					success: function (result) {
 						if (result == "1") {
 
-							window.location.assign("http://localhost/stuff/turnip/index.php");
+							window.location.assign("http://yasuo-gg.stackstaging.com/turnip/index.php");
 						} else {
 
 							$("#loginAlert").html(result).show();
