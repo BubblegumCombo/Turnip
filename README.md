@@ -1,2 +1,2 @@
-# turnip
- twitter for turnips then memes
+# Turnip
+ A twitter clone used to share turnip prices in Animal Crossing
